@@ -1,0 +1,34 @@
+# Robots.txt for Careerhub
+# https://www.Careerhub.tech
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.Careerhub.tech/sitemap.xml
+
+# Block API routes from indexing
+Disallow: /api/
+
+# Block admin pages
+Disallow: /admin/
+
+# Block user-specific pages that shouldn't be indexed
+Disallow: /settings
+Disallow: /bookmarks
+Disallow: /messages
+
+# Allow important pages
+Allow: /
+Allow: /login
+Allow: /register
+Allow: /topics
+Allow: /companies
+Allow: /salaries
+Allow: /reviews
+
+
+
+
+
+
