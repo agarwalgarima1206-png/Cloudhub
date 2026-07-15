@@ -2,7 +2,7 @@
 // API GATEWAY - Health Check Route
 // ============================================
 
-const { getRedisClient } = require('../../../shared/redis');
+const { getRedisClient } = require('../../shared/redis');
 
 async function healthCheck(req, res) {
   const health = {

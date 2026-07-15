@@ -6,7 +6,7 @@
 // ============================================
 
 const express = require('express');
-const { getCache, setCache } = require('../../shared/redis');
+const { getCache, setCache } = require('../shared/redis');
 
 const app = express();
 const PORT = process.env.AI_SERVICE_PORT || 4005;

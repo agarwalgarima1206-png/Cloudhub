@@ -10,8 +10,17 @@
 
 const express = require('express');
 const nodemailer = require('nodemailer');
-const { createPool, query } = require('../../shared/database');
-const { subscribe, connect: connectRabbitMQ, EXCHANGES, QUEUES, ROUTING_KEYS } = require('../../shared/rabbitmq');
+
+// Shared modules
+const { createPool, query } = require('../shared/database');
+
+const {
+  subscribe,
+  connect: connectRabbitMQ,
+  EXCHANGES,
+  QUEUES,
+  ROUTING_KEYS,
+} = require('../shared/rabbitmq');
 
 const app = express();
 const PORT = process.env.NOTIFICATION_SERVICE_PORT || 4003;

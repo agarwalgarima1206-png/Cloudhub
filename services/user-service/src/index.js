@@ -18,8 +18,8 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 const { SignJWT, jwtVerify } = require('jose');
-const { createPool, query } = require('../../shared/database');
-const { publish, connect: connectRabbitMQ, EXCHANGES, ROUTING_KEYS } = require('../../shared/rabbitmq');
+const { createPool, query } = require('../shared/database');
+const { publish, connect: connectRabbitMQ, EXCHANGES, ROUTING_KEYS } = require('../shared/rabbitmq');
 
 const app = express();
 const PORT = process.env.USER_SERVICE_PORT || 4001;

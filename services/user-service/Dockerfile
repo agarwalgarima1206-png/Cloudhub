@@ -1,9 +1,13 @@
-FROM node:20-alpine
+FROM node:18-alpine
+
 WORKDIR /app
-COPY package*.json ./
+
+COPY services/user-service/package*.json ./
+
 RUN npm install --production
-COPY . .
-# Copy shared utilities
-COPY shared /app/shared
-EXPOSE 4000-4005
+
+COPY services/user-service/ .
+
+EXPOSE 4001
+
 CMD ["node", "src/index.js"]

@@ -8,10 +8,9 @@
 const express = require('express');
 const http = require('http');
 const WebSocket = require('ws');
-const { createPool, query } = require('../../shared/database');
-const { setSession, removeSession, getSession } = require('../../shared/redis');
-const { publish, connect: connectRabbitMQ, EXCHANGES, ROUTING_KEYS } = require('../../shared/rabbitmq');
-
+const { createPool, query } = require('../shared/database');
+const { setSession, removeSession, getSession } = require('../shared/redis');
+const { publish, connect: connectRabbitMQ, EXCHANGES, ROUTING_KEYS } = require('../shared/rabbitmq');
 const app = express();
 const PORT = process.env.MESSAGING_SERVICE_PORT || 4004;
 app.use(express.json());

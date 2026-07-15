@@ -7,9 +7,9 @@
 // ============================================
 
 const express = require('express');
-const { createPool, query } = require('../../shared/database');
-const { getCache, setCache, invalidateCachePattern } = require('../../shared/redis');
-const { publish, connect: connectRabbitMQ, EXCHANGES, ROUTING_KEYS } = require('../../shared/rabbitmq');
+const { createPool, query } = require('../shared/database');
+const { getCache, setCache, invalidateCachePattern } = require('../shared/redis');
+const { publish, connect: connectRabbitMQ, EXCHANGES, ROUTING_KEYS } = require('../shared/rabbitmq');
 
 const app = express();
 const PORT = process.env.CONTENT_SERVICE_PORT || 4002;
