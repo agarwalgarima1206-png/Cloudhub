@@ -6,7 +6,7 @@
 // service needing its own rate limiting logic.
 // ============================================
 
-const { checkRateLimit } = require('../../shared/redis');
+const { checkRateLimit } = require('../../../shared/redis');
 /**
  * Standard rate limiter: 100 requests per minute
  * Applied globally to all routes

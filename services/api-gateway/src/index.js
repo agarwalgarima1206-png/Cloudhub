@@ -17,8 +17,8 @@ const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
-const { authenticateToken, optionalAuth } = require('./middleware/auth');
-const { rateLimiter, strictRateLimiter } = require('./middleware/rateLimiter');
+const { authenticateToken, optionalAuth } = require('../middleware/auth');
+const { rateLimiter, strictRateLimiter } = require('../middleware/rateLimiter');
 const { healthCheck } = require('./routes/health');
 
 const app = express();
